@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contribute</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="main">
+    <aside>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcVWN1OXR4j0F4qClqY9wVXBEgIzrR7GWTgDEm8oakQ6RlXA/viewform?embedded=true" width="640" height="871" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </aside>
+    <h1 style="text-align: center"> To Plant The Tree Click The Following button </h1>
+
+    <span class="tree">
+      <img src="tree.jpg" class="icon"  />
+      <button type="button" class="btn btn-primary btn-lg" onclick="openPopup()"> Plant Tree </button>
+      <div class="popup" id="popup">
+        <img src="tick.jpg">
+        <h2>Thank You !</h2>
+        <p>
+          you have successfully planted the tree
+        </p>
+        <button type="button" onclick="closePopup()">OK</button>
+
+      </div>
+    </span>
+
+    <br><br>
+    <span class="water">
+      <img src="water.png" class="icon"></img>
+      <button type="button" class="btn btn-primary btn-lg" onclick="openPopupPoured()">Pour Water</button>
+      <div class="popup" id="poured">
+        <img src="tick.jpg">
+        <h2>Thank You!</h2>
+        <p>
+          You have successfully poured water to the tree
+        </p>
+        <button type="button" onclick="closePopupPoured()">OK</button>
+      </div>
+    </span>
+   
+  </div>
+    
+  <script>
+    let popup = document.getElementById("popup");
+    let poured = document.getElementById("poured");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+
+    }
+    //puoued
+    function openPopupPoured() {
+      poured.classList.add("open-popup");
+
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+    //poured
+    function closePopupPoured() {
+      poured.classList.remove("open-popup");
+    }
+
+  </script>
+
+</body>
+
+</html>
